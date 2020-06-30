@@ -1,0 +1,29 @@
+@import '~normalize.css';
+@import './fonts.css';
+
+body {
+    font-family: 'Proxima', sans-serif;
+}
+
+.container {
+    min-width: 1000px;
+    padding-top: 2rem;
+    transition: 5s;
+}
+h1 {
+    text-align: center;
+}
+.logo {
+    background: transparent url('../assets/logo.png') center no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+}
+.code {
+    min-width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: #eee;
+    color: crimson;
+}

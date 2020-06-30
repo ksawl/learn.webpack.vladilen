@@ -1,0 +1,12 @@
+$border: 1px solid red;
+
+.box {
+    padding: 1rem;
+    border-radius: 5px;
+    border: $border;
+    transition: 0.3s;
+
+    h1 {
+        text-align: center;
+    }
+}
