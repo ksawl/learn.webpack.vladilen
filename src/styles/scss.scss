@@ -1,6 +1,12 @@
 $border: 1px solid red;
 
+.container {
+    background: #000 url('../assets/bg_adminlogin.jpg');
+    background-size: cover;
+}
 .box {
+    background: #000 url('../assets/logo.svg');
+    background-size: cover;
     padding: 1rem;
     border-radius: 5px;
     border: $border;

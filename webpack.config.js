@@ -120,12 +120,55 @@ module.exports = {
                 }),
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
-                use: ["file-loader"],
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: filename("[ext]"),
+                            outputPath: "./img",
+                            useRelativePath: true,
+                        },
+                    },
+                    {
+                        loader: "image-webpack-loader",
+                        options: {
+                            disable: isDev,
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65,
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: true,
+                            },
+                            pngquant: {
+                                quality: [0.65, 0.9],
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlaced: true,
+                            },
+                            // the webp option will enable WEBP
+                            // Compress JPG & PNG images into WEBP
+                            // webp: {
+                            //     quality: 75,
+                            // },
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(ttf|eot|otf|woff|woff2)$/,
-                use: ["file-loader"],
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "./fonts",
+                        },
+                    },
+                ],
             },
             {
                 test: /\.js$/,

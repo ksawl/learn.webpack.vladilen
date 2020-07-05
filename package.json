@@ -1,7 +1,7 @@
 {
   "name": "webpack_vladilen",
   "version": "1.0.0",
-  "description": "webpack by Vladilen",
+  "description": "Webpack template by Vladilen",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
@@ -26,6 +26,7 @@
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass": "^1.26.9",
